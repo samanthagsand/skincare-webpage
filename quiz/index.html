@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skincare Routine Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <header class="top-bar">
+      <h1>Pore Decicions</h1>
+      <p>Your personalized skincare routine finder</p>
+    </header>
+
+    <div class="progress-wrapper">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p id="progressText">Question 1 of 5</p>
+    </div>
+
+    <main id="quiz">
+      <!-- Question 1 -->
+      <section class="question active" id="q1">
+        <h2>What is your skin type?</h2>
+        <div class="options">
+          <button class="option" data-question="q1" data-value="dry">Dry</button>
+          <button class="option" data-question="q1" data-value="oily">Oily</button>
+          <button class="option" data-question="q1" data-value="combination">Combination</button>
+          <button class="option" data-question="q1" data-value="sensitive">Sensitive</button>
+        </div>
+      </section>
+
+      <!-- Question 2 -->
+      <section class="question" id="q2">
+        <h2>What is your main skin concern?</h2>
+        <div class="options">
+          <button class="option" data-question="q2" data-value="acne">Acne / Breakouts</button>
+          <button class="option" data-question="q2" data-value="redness">Redness</button>
+          <button class="option" data-question="q2" data-value="darkspots">Dark Spots</button>
+          <button class="option" data-question="q2" data-value="dryness">Dryness / Dullness</button>
+        </div>
+      </section>
+
+      <!-- Question 3 -->
+      <section class="question" id="q3">
+        <h2>How much time do you want to spend on skincare?</h2>
+        <div class="options">
+          <button class="option" data-question="q3" data-value="twomin">2 mins</button>
+          <button class="option" data-question="q3" data-value="fivetenmin">5-10 mins</button>
+          <button class="option" data-question="q3" data-value="fifteentwentymin">15-20 mins</button>
+          <button class="option" data-question="q3" data-value="fullroutine">FULL routine</button>
+        </div>
+      </section>
+
+      <!-- Question 4 -->
+      <section class="question" id="q4">
+        <h2>What kind of ingredients do you want?</h2>
+        <div class="options">
+          <button class="option" data-question="q4" data-value="natural">All Natural</button>
+          <button class="option" data-question="q4" data-value="sciencebacked">Science-backed</button>
+          <button class="option" data-question="q4" data-value="mix">Mix of Both</button>
+          <button class="option" data-question="q4" data-value="anything">Whatever Works</button>
+        </div>
+      </section>
+
+      <!-- Question 5 -->
+      <section class="question" id="q5">
+        <h2>What is your routine missing?</h2>
+        <div class="options">
+          <button class="option" data-question="q5" data-value="spf">SPF</button>
+          <button class="option" data-question="q5" data-value="vitaminc">Vitamin C</button>
+          <button class="option" data-question="q5" data-value="moisturizer">Moisturizer</button>
+          <button class="option" data-question="q5" data-value="eyecream">Eye Cream</button>
+        </div>
+      </section>
+
+      <!-- Result Section -->
+      <section class="question" id="result">
+        <h2>Your Recommended Routine</h2>
+        <div class="result-card">
+          <h3 id="routineTitle"></h3>
+          <p id="routineDescription"></p>
+
+          <div class="routine-steps">
+            <h4>Suggested Routine:</h4>
+            <ul id="routineSteps"></ul>
+          </div>
+        </div>
+
+        <button id="restartBtn">Retake Quiz</button>
+      </section>
+    </main>
+
+    <div class="navigation-buttons">
+      <button id="prevBtn">Back</button>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
